@@ -189,7 +189,7 @@ added_events = handler.get_by_type("added")
 
 **BufferHandler** - FIFO queue for sequential processing:
 
-This is useful for buffering incoming change notifications when you workflow is busy on something else, you can then have a loop in the workflow to consume the notifications from the buffer when it is ready.
+This is useful for buffering incoming change notifications when your workflow is busy on something else; you can then have a loop in the workflow to consume the notifications from the buffer when it is ready.
 
 ```python
 from langchain_drasi import BufferHandler
