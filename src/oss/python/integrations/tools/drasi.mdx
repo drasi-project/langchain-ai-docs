@@ -124,13 +124,13 @@ We can use the Drasi tool in a LangGraph agent to create reactive, event-driven 
 
 ```python Agent with tool icon="robot"
 from langchain_anthropic import ChatAnthropic
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 
 # Initialize the model
 model = ChatAnthropic(model="claude-sonnet-4-5-20250929")
 
 # Create agent with Drasi tool
-agent = create_react_agent(model, [tool])
+agent = create_agent(model, [tool])
 
 # Run the agent
 result = agent.invoke(
@@ -213,7 +213,7 @@ handler = LangGraphMemoryHandler(
 )
 ```
 
-### Custom Handlers
+### Custom handlers
 
 You can create custom handlers by extending `BaseDrasiNotificationHandler`:
 
